@@ -128,8 +128,7 @@ class UsersController extends Controller
         }
 
         $user->type = $request->type;
-        $user->phone = $request->phone;
-        $user->imei = $request->imei;
+        $user->phone = $request->phone;      
         $user->dep_id = $request->dep_id;
 
         if ($request->hasFile('image')) {

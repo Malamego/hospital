@@ -28,7 +28,6 @@ class UsersRequest extends FormRequest
             'email'    => 'required|unique:users',
             'phone'    => 'required|unique:users',
             'dep_id'   => 'sometimes|exists:departments,id',
-            'imei'     => 'required|min:14',
             'password' => 'required|confirmed',
             'type'     => 'required|in:user,admin,doctor,nurse',
             'image'    => 'nullable|image',
@@ -50,8 +49,7 @@ class UsersRequest extends FormRequest
             'email'    => trans('main.email'),
             'password' => trans('main.password'),
             'type'     => trans('main.type'),
-            'dep_id'   => trans('main.dep_id'),
-            'imei'     => trans('main.imei'),
+            'dep_id'   => trans('main.dep_id'),            
         ];
     }
 }

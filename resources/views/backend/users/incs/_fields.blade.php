@@ -130,19 +130,6 @@
         </div>
     </div>
 
-<!-- Add by Mario for IMEI -->
-        <div class="form-group{{ $errors->has('imei') ? ' has-error' : '' }}">
-            <label class="col-md-2 control-label">{{ trans('main.imei') }} <span class="required"></span> </label>
-            <div class="col-md-10">
-                <input type="text" name="imei" value="{{ getData($data, 'imei') }}" class="form-control" placeholder="{{ trans('main.imei') }}" required>
-                @if ($errors->has('imei'))
-                    <span class="help-block">
-                        <strong class="help-block">{{ $errors->first('imei') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
-
 
     <div class='form-group hidden' id="roles">
         <label class="col-md-2 control-label">{{ trans('main.assign_rolles') }}</label>
