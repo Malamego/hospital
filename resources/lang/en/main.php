@@ -734,8 +734,7 @@ return [
     'myorder'                       => 'Lesson Order',
     'game'                          => 'Game',
     'text'                          => 'Text',
-
-    'ordernumber'                   => 'This Order of lesson is Taken in Same Day',
+    'bednumber'                   => 'This Number of bed is Taken in Same Department',
     'imei'                          => 'IMEI',
     'slug'                          => 'Slug',
     'class'                         => 'Class',

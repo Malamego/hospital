@@ -120,9 +120,6 @@
                 <div class="page-footer-inner"> {{ date('Y') }} &copy; Developed By
                     <a target="_blank" href="https://www.facebook.com/megomalamego">
                         @@Mario Adel
-                    </a>, Designed and Idea By
-                    <a target="_blank" href="https://web.facebook.com/nourhan.nasser.39545">
-                        @@Nourhan Nasser
                     </a>
                 </div>
                 <div class="scroll-to-top">

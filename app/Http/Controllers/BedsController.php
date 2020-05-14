@@ -49,6 +49,10 @@ class BedsController extends Controller
     public function store(BedsRequest $request)
     {
         $requestAll = $request->all();
+        if (Bed::where('dep_id', $request->dep_id)->where('number', $request->number)->exists()) {
+          session()->flash('error', trans('main.bednumber'));
+          return redirect()->back();
+      }
 
         $bed =  Bed::create($requestAll);
         session()->flash('success', trans('main.added-message'));

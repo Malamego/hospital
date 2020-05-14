@@ -52,14 +52,7 @@ class PatientsController extends Controller
      */
     public function store(PatientsRequest $request)
     {
-        // To Make Sure my order doesn't duplicate..
-        $requestAll = $request->all();
-
-        // if (Patient::where('course_id', $request->course_id)->where('myorder', $request->myorder)->exists()) {
-        //     session()->flash('error', trans('main.ordernumber'));
-        //     return redirect()->back();
-        // }
-
+        // To Make Sure my Bed Dosn't doesn't duplicate..
         $requestAll = $request->all();
        if ($request->hasfile('image')) {
         $requestAll['image'] = Helper::Upload('patients', $request->file('image'), 'checkImages');
@@ -136,7 +129,7 @@ class PatientsController extends Controller
         $pat->echo          =     $request->echo;
 
         if ($request->hasFile('image')) {
-            $pat->image = Helper::UploadUpdate($pat->image ?? null, 'patients', $request->file('image'), 'checkImages');
+            $pat->image = Helper::UploadUpdate($pat->image ?? "" , 'patients', $request->file('image'), 'checkImages');
         }
         $pat->save();
 

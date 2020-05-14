@@ -2,7 +2,7 @@
   <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
       <label class="col-md-2 control-label">{{ trans('main.bedn') }} <span class="required"></span> </label>
       <div class="col-md-6">
-          <input type="number" name="number"  value="{{ getData($data, 'number') }}" class="form-control" placeholder="{{ trans('main.number') }}" required>
+          <input type="number" name="number" min="1" value="{{ getData($data, 'number') }}" class="form-control" placeholder="{{ trans('main.number') }}" required>
           @if ($errors->has('number'))
               <span class="help-block">
                   <strong class="help-block">{{ $errors->first('number') }}</strong>
@@ -28,6 +28,7 @@
             @endif
         </div>
     </div>
+
 
     <div class="form-group{{ $errors->has('desc') ? ' has-error' : '' }}">
         <label class="col-md-2 control-label">{{ trans('main.description') }}</label>

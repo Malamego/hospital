@@ -128,12 +128,12 @@ class UsersController extends Controller
         }
 
         $user->type = $request->type;
-        $user->phone = $request->phone;      
+        $user->phone = $request->phone;
         $user->dep_id = $request->dep_id;
-
         if ($request->hasFile('image')) {
-            $user->image = Helper::UploadUpdate($user->image ?? null, 'users', $request->file('image'), 'checkImages');
+            $user->image = Helper::UploadUpdate($user->image ?? "", 'users', $request->file('image'), 'checkImages');
         }
+
         $user->save();
 
         $roles = $request['roles']; //Retreive all roles

@@ -146,7 +146,7 @@
         <label class="col-md-2 control-label">{{ trans('main.regdate') }}  </label>
         <div class="col-md-8">
             <div class="input-group date date-picker" data-date-format="yyyy-mm-dd" data-date-start-date="+0d">
-                <input type="text" name="regdate" class="form-control" value="{{ getData($data, 'regdate') }}" readonly required>
+                <input type="text" name="regdate" class="form-control"  value="{{ getData($data, 'regdate') }}" readonly required>
                 <span class="input-group-btn">
                     <button class="btn default" type="button">
                         <i class="fa fa-calendar"></i>
