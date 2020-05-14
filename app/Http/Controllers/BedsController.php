@@ -105,8 +105,11 @@ class BedsController extends Controller
         $bed->desc = $request->desc;
         $bed->status = $request->status;
         $bed->dep_id = $request->dep_id;
+        if (Bed::where('dep_id', $request->dep_id)->where('number', $request->number)->exists()) {
+          session()->flash('error', trans('main.bednumber'));
+          return redirect()->back();
+          
         $bed->save();
-
         session()->flash('success', trans('main.updated'));
         return redirect()->route('beds.show', [$bed->id]);
     }
